@@ -1864,3 +1864,8 @@ esp_err_t StartWebServer(void)
         return ESP_FAIL;
     }
 }
+
+httpd_handle_t web_server_get_handle(void)
+{
+    return s_server;   // (or g_server if you renamed it)
+}
